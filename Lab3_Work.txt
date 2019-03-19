@@ -1,0 +1,16 @@
+Layers
+
+Layers describe the logical groupings of the functionality and components in an application. Which means that layers are merely a way of organizing your code. In example, if your application is a cake, a layer is a slice. 
+Each logical layer contains a number of discrete component types grouped into sub layers, which can help to differentiate between the different kinds of tasks performed by the components.
+Layers can be located on different tiers, or they may reside on the same tier, practicly, they do not take into account the physical location of components.
+
+Tiers
+
+Tiers describe the physical distribution of the functionality and components on separate servers, computers, networks, or remote locations, in other words they are places where layers are deployed and where layers run.
+In order to increase the maintainability, scalability, flexibility consider deploying asynchronous business components, workflow components, and services that have similar load and I/O characteristics on a separate physical tier.
+Practicly we do this to distribute the workload efficientize the application.
+
+Logging & Security
+ 
+Amandoua sunt "Cross-cutting Concerns", insemnand ca ele nu apartin unui layer, ci tin de intreaga aplicatie. 
+Loggingul trebuie facut la nivelul fiecarui layer, iar securitatea poate fi proiectata chiar si la comunicarea intre tiere (e.g. daca avem un server de aplicatie si unul de web, putem pune un firewall intre ele).
